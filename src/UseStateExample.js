@@ -12,6 +12,10 @@ function UseStateExample() {
     return (
         <div className="App">
             <header className="App-header">
+                <div>
+                    <strong>Confirmed Name: {profile.confirmedName}</strong>
+                    <p>Books: {profile.books}</p>
+                </div>
                 <form onSubmit={setConfirmedName}>
                     <input onChange={e => setProfile(currentState => ({...currentState, name: e.target.value}))} placeholder={'Your name'}></input>
                     <button value={'Submit'}>
@@ -21,12 +25,6 @@ function UseStateExample() {
                 <button onClick={e => setProfile(currentState => ({...currentState, books: currentState.books + 1}))}>
                     Add book
                 </button>
-                <strong>
-                    Confirmed Name: {profile.confirmedName}
-                </strong>
-                <p>
-                    Books: {profile.books}
-                </p>
             </header>
         </div>
     );
