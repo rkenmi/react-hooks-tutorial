@@ -1,7 +1,7 @@
 import './App.css';
 import {useForm} from "./hooks/useForm";
 
-function CustomHookExample() {
+function CustomHookExampleWithUseState() {
     const [form, onChangeForm] = useForm({firstName: '', lastName: ''});
 
     return (
@@ -22,4 +22,4 @@ function CustomHookExample() {
     );
 }
 
-export default CustomHookExample;
+export default CustomHookExampleWithUseState;
